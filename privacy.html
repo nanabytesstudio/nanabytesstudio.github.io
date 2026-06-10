@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Nana Bytes</title>
+    <title data-i18n="privacy.title">Política de Privacidad - Nana Bytes</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
     <meta name="description"
           content="Política de privacidad de las aplicaciones desarrolladas por Nana Bytes.">
+
+    <style>
+        #lang-btn {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 50;
+            background: rgba(255,255,255,.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,.15);
+            color: #fff;
+            padding: .5rem 1rem;
+            border-radius: .75rem;
+            cursor: pointer;
+            font-size: .875rem;
+            transition: background .2s;
+        }
+        #lang-btn:hover {
+            background: rgba(255,255,255,.2);
+        }
+    </style>
 </head>
 
 <body class="bg-slate-950 text-slate-200">
@@ -16,24 +37,24 @@
     <main class="max-w-4xl mx-auto px-6 py-16">
 
         <a href="./index.html"
-           class="text-violet-400 hover:text-violet-300">
+           class="text-violet-400 hover:text-violet-300" data-i18n="privacy.back">
             ← Volver a Nana Bytes
         </a>
 
-        <h1 class="text-5xl font-bold text-white mt-8 mb-4">
+        <h1 class="text-5xl font-bold text-white mt-8 mb-4" data-i18n="privacy.title">
             Política de Privacidad
         </h1>
 
-        <p class="text-slate-400 mb-12">
+        <p class="text-slate-400 mb-12" data-i18n="privacy.updated">
             Última actualización: 10 de junio de 2026
         </p>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="privacy.intro.title">
                 Introducción
             </h2>
 
-            <p>
+            <p data-i18n="privacy.intro.body">
                 Nana Bytes desarrolla aplicaciones móviles centradas en la privacidad
                 del usuario. Nuestras aplicaciones están diseñadas para funcionar
                 localmente en el dispositivo y no requieren la creación de cuentas
@@ -42,11 +63,11 @@
         </section>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="privacy.collect.title">
                 Información que recopilamos
             </h2>
 
-            <p class="mb-4">
+            <p class="mb-4" data-i18n="privacy.collect.body">
                 Las aplicaciones desarrolladas por Nana Bytes no recopilan,
                 almacenan ni transmiten información personal identificable
                 a servidores propios ni de terceros.
@@ -54,11 +75,11 @@
         </section>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="privacy.local.title">
                 Almacenamiento local de datos
             </h2>
 
-            <p>
+            <p data-i18n="privacy.local.body">
                 La información generada y almacenada por el usuario se guarda
                 exclusivamente en su dispositivo mediante mecanismos locales
                 del sistema Android. Estos datos son utilizados únicamente para
@@ -68,16 +89,16 @@
         </section>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="privacy.backup.title">
                 Copias de seguridad de Android
             </h2>
 
-            <p class="mb-4">
+            <p class="mb-4" data-i18n="privacy.backup.body1">
                 Algunas aplicaciones pueden beneficiarse del sistema de copia
                 de seguridad automática proporcionado por Android.
             </p>
 
-            <p class="mb-4">
+            <p class="mb-4" data-i18n="privacy.backup.body2">
                 Si el usuario tiene habilitada la copia de seguridad de su
                 dispositivo asociada a su cuenta de Google, Android puede
                 incluir determinados datos de la aplicación en dichas copias
@@ -85,7 +106,7 @@
                 de dispositivo o tras un restablecimiento.
             </p>
 
-            <p>
+            <p data-i18n="privacy.backup.body3">
                 Nana Bytes no tiene acceso a estas copias de seguridad y no
                 puede consultar, modificar ni eliminar la información almacenada
                 mediante los servicios de Google.
@@ -93,11 +114,11 @@
         </section>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="privacy.third.title">
                 Servicios de terceros
             </h2>
 
-            <p>
+            <p data-i18n="privacy.third.body">
                 Las aplicaciones pueden utilizar servicios proporcionados por
                 Google Play para su distribución, actualización y funcionamiento
                 básico. El tratamiento de datos realizado por dichos servicios
@@ -106,27 +127,27 @@
         </section>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="privacy.rights.title">
                 Derechos del usuario
             </h2>
 
-            <p class="mb-4">
+            <p class="mb-4" data-i18n="privacy.rights.body">
                 El usuario puede eliminar toda la información almacenada por la
                 aplicación en cualquier momento mediante:
             </p>
 
             <ul class="list-disc pl-6 space-y-2">
-                <li>La desinstalación de la aplicación.</li>
-                <li>La eliminación de los datos de la aplicación desde la configuración de Android.</li>
+                <li data-i18n="privacy.rights.item1">La desinstalación de la aplicación.</li>
+                <li data-i18n="privacy.rights.item2">La eliminación de los datos de la aplicación desde la configuración de Android.</li>
             </ul>
         </section>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="privacy.changes.title">
                 Cambios en esta política
             </h2>
 
-            <p>
+            <p data-i18n="privacy.changes.body">
                 Esta política de privacidad podrá actualizarse para reflejar
                 cambios en las aplicaciones o en requisitos legales. La versión
                 más reciente estará siempre disponible en esta página.
@@ -134,25 +155,76 @@
         </section>
 
         <section>
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="privacy.contact.title">
                 Contacto
             </h2>
 
-            <p>
+            <p data-i18n="privacy.contact.body">
                 Si tienes cualquier consulta relacionada con esta política de
                 privacidad, puedes contactar con:
             </p>
 
-            <p class="mt-4 font-semibold text-white">
+            <p class="mt-4 font-semibold text-white" data-i18n="privacy.contact.name">
                 Nana Bytes
             </p>
 
-            <p class="text-violet-400">
+            <p class="text-violet-400" data-i18n="privacy.contact.email">
                 contact.nanabytes@gmail.com
             </p>
         </section>
 
     </main>
+
+    <button id="lang-btn" data-i18n="lang.switch">EN</button>
+
+<script>
+(function() {
+    var SUPPORTED = { es: 'es', en: 'en' };
+    var translations = {};
+
+    function getLang() {
+        var stored = localStorage.getItem('lang');
+        if (stored && SUPPORTED[stored]) return stored;
+        var nav = (navigator.language || '').split('-')[0];
+        return SUPPORTED[nav] || 'es';
+    }
+
+    var currentLang = getLang();
+
+    function loadLang(lang) {
+        return fetch('./i18n/' + lang + '.json').then(function(r) { return r.json(); });
+    }
+
+    function applyTranslations(t) {
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+            var key = el.getAttribute('data-i18n');
+            var text = t[key];
+            if (text !== undefined) {
+                if (el.tagName === 'META') {
+                    el.setAttribute('content', text);
+                } else if (el.tagName === 'TITLE') {
+                    el.textContent = text;
+                } else {
+                    el.textContent = text;
+                }
+            }
+        });
+        document.documentElement.lang = currentLang;
+    }
+
+    function setLang(lang) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        loadLang(lang).then(applyTranslations);
+    }
+
+    document.getElementById('lang-btn').addEventListener('click', function() {
+        setLang(currentLang === 'es' ? 'en' : 'es');
+    });
+
+    loadLang(currentLang).then(applyTranslations);
+})();
+</script>
 
 </body>
 </html>

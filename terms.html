@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos y Condiciones - Nana Bytes</title>
+    <title data-i18n="terms.title">Términos y Condiciones - Nana Bytes</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
     <meta name="description"
           content="Términos y condiciones de uso de las aplicaciones desarrolladas por Nana Bytes.">
+
+    <style>
+        #lang-btn {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 50;
+            background: rgba(255,255,255,.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,.15);
+            color: #fff;
+            padding: .5rem 1rem;
+            border-radius: .75rem;
+            cursor: pointer;
+            font-size: .875rem;
+            transition: background .2s;
+        }
+        #lang-btn:hover {
+            background: rgba(255,255,255,.2);
+        }
+    </style>
 </head>
 
 <body class="bg-slate-950 text-slate-200">
@@ -16,24 +37,24 @@
     <main class="max-w-4xl mx-auto px-6 py-16">
 
         <a href="./index.html"
-           class="text-violet-400 hover:text-violet-300">
+           class="text-violet-400 hover:text-violet-300" data-i18n="terms.back">
             ← Volver a Nana Bytes
         </a>
 
-        <h1 class="text-5xl font-bold text-white mt-8 mb-4">
+        <h1 class="text-5xl font-bold text-white mt-8 mb-4" data-i18n="terms.title">
             Términos y Condiciones
         </h1>
 
-        <p class="text-slate-400 mb-12">
+        <p class="text-slate-400 mb-12" data-i18n="terms.updated">
             Última actualización: 10 de junio de 2026
         </p>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="terms.accept.title">
                 Aceptación de los términos
             </h2>
 
-            <p>
+            <p data-i18n="terms.accept.body">
                 Al descargar, instalar o utilizar cualquier aplicación
                 desarrollada por Nana Bytes, aceptas estos términos y
                 condiciones de uso.
@@ -41,11 +62,11 @@
         </section>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="terms.use.title">
                 Uso de las aplicaciones
             </h2>
 
-            <p>
+            <p data-i18n="terms.use.body">
                 Las aplicaciones se proporcionan para uso personal y conforme
                 a la legislación aplicable. El usuario es responsable del uso
                 que realice de las mismas.
@@ -53,11 +74,11 @@
         </section>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="terms.avail.title">
                 Disponibilidad
             </h2>
 
-            <p>
+            <p data-i18n="terms.avail.body">
                 Nana Bytes podrá actualizar, modificar o discontinuar una
                 aplicación en cualquier momento sin obligación de mantener
                 funcionalidades específicas o compatibilidad con futuras
@@ -66,11 +87,11 @@
         </section>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="terms.disclaimer.title">
                 Exclusión de responsabilidad
             </h2>
 
-            <p>
+            <p data-i18n="terms.disclaimer.body">
                 Las aplicaciones se proporcionan "tal cual", sin garantías
                 expresas o implícitas. Nana Bytes no será responsable de
                 pérdidas de datos, interrupciones del servicio o daños
@@ -80,11 +101,11 @@
         </section>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="terms.ip.title">
                 Propiedad intelectual
             </h2>
 
-            <p>
+            <p data-i18n="terms.ip.body">
                 Todos los derechos sobre las aplicaciones, diseños, código,
                 textos, imágenes y demás contenidos asociados pertenecen a
                 Nana Bytes o a sus respectivos titulares.
@@ -92,35 +113,86 @@
         </section>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="terms.changes.title">
                 Cambios en estos términos
             </h2>
 
-            <p>
+            <p data-i18n="terms.changes.body">
                 Nana Bytes podrá actualizar estos términos cuando sea necesario.
                 La versión vigente estará siempre disponible en esta página.
             </p>
         </section>
 
         <section>
-            <h2 class="text-2xl font-semibold text-white mb-4">
+            <h2 class="text-2xl font-semibold text-white mb-4" data-i18n="terms.contact.title">
                 Contacto
             </h2>
 
-            <p>
+            <p data-i18n="terms.contact.body">
                 Para cualquier consulta relacionada con estos términos:
             </p>
 
-            <p class="mt-4 font-semibold text-white">
+            <p class="mt-4 font-semibold text-white" data-i18n="terms.contact.name">
                 Nana Bytes
             </p>
 
-            <p class="text-violet-400">
+            <p class="text-violet-400" data-i18n="terms.contact.email">
                 contact.nanabytes@gmail.com
             </p>
         </section>
 
     </main>
+
+    <button id="lang-btn" data-i18n="lang.switch">EN</button>
+
+<script>
+(function() {
+    var SUPPORTED = { es: 'es', en: 'en' };
+    var translations = {};
+
+    function getLang() {
+        var stored = localStorage.getItem('lang');
+        if (stored && SUPPORTED[stored]) return stored;
+        var nav = (navigator.language || '').split('-')[0];
+        return SUPPORTED[nav] || 'es';
+    }
+
+    var currentLang = getLang();
+
+    function loadLang(lang) {
+        return fetch('./i18n/' + lang + '.json').then(function(r) { return r.json(); });
+    }
+
+    function applyTranslations(t) {
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+            var key = el.getAttribute('data-i18n');
+            var text = t[key];
+            if (text !== undefined) {
+                if (el.tagName === 'META') {
+                    el.setAttribute('content', text);
+                } else if (el.tagName === 'TITLE') {
+                    el.textContent = text;
+                } else {
+                    el.textContent = text;
+                }
+            }
+        });
+        document.documentElement.lang = currentLang;
+    }
+
+    function setLang(lang) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        loadLang(lang).then(applyTranslations);
+    }
+
+    document.getElementById('lang-btn').addEventListener('click', function() {
+        setLang(currentLang === 'es' ? 'en' : 'es');
+    });
+
+    loadLang(currentLang).then(applyTranslations);
+})();
+</script>
 
 </body>
 </html>
