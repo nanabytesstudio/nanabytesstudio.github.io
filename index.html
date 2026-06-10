@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nana Bytes</title>
+
+    <meta name="description"
+          content="Estudio indie de desarrollo de aplicaciones móviles.">
+
+    <link rel="icon" href="/assets/favicon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0f172a;
+        }
+
+        .glass {
+            backdrop-filter: blur(12px);
+            background: rgba(255,255,255,.04);
+            border: 1px solid rgba(255,255,255,.08);
+        }
+    </style>
+</head>
+<body class="text-white">
+
+<header class="relative">
+
+    <div
+        class="h-[520px] bg-cover bg-center"
+        style="background-image:url('./assets/banner.jpg');">
+    </div>
+
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <div class="absolute inset-0 flex items-center">
+        <div class="max-w-6xl mx-auto px-6 w-full">
+
+            <div class="flex flex-col md:flex-row items-center gap-8">
+
+                <img
+                    src="./assets/avatar.jpg"
+                    alt="Nana Bytes"
+                    class="w-40 h-40 rounded-full shadow-2xl">
+
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold">
+                        Nana Bytes
+                    </h1>
+
+                    <p class="mt-4 text-xl text-slate-200 max-w-xl">
+                        Desarrollo de aplicaciones móviles,
+                        herramientas digitales y pequeños proyectos
+                        construidos con atención al detalle.
+                    </p>
+
+                    <div class="mt-8 flex gap-4 flex-wrap">
+                        <a href="#apps"
+                           class="px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-500">
+                            Ver aplicaciones
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</header>
+
+<section class="py-24 px-6">
+
+    <div class="max-w-5xl mx-auto text-center">
+
+        <h2 class="text-4xl font-bold">
+            Construimos apps útiles
+        </h2>
+
+        <p class="mt-6 text-slate-300 text-lg max-w-3xl mx-auto">
+            Nos enfocamos en crear aplicaciones sencillas,
+            rápidas y bien diseñadas para resolver problemas
+            reales del día a día.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="apps" class="pb-24 px-6">
+
+    <div class="max-w-6xl mx-auto">
+
+        <h2 class="text-4xl font-bold mb-10">
+            Aplicaciones
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <article class="glass rounded-3xl p-6">
+
+                <div
+                    class="w-16 h-16 rounded-2xl bg-violet-600 mb-5">
+					<img
+						src="./assets/notoVault.png"
+						alt="NotoVault">
+                </div>
+
+                <h3 class="text-2xl font-semibold">
+                    NotoVault
+                </h3>
+
+                <p class="mt-3 text-slate-300">
+                    Sin publicidad. Sin siguimiento. Tus notas con privacidad garantizada.
+                </p>
+
+                <div class="mt-6 flex gap-3">
+
+                    <a href="#"
+                       class="text-violet-400 hover:text-violet-300">
+                        Google Play (Próximamente) →
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="glass rounded-3xl p-6">
+
+                <div
+                    class="w-16 h-16 rounded-2xl bg-sky-600 mb-5">
+                </div>
+
+                <h3 class="text-2xl font-semibold">
+                    Próximamente
+                </h3>
+
+                <p class="mt-3 text-slate-300">
+                    Nuevos proyectos en desarrollo.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="px-6 pb-24">
+
+    <div class="max-w-5xl mx-auto">
+
+        <div class="glass rounded-3xl p-10 text-center">
+
+            <h2 class="text-3xl font-bold">
+                Filosofía Nana Bytes
+            </h2>
+
+            <p class="mt-5 text-slate-300">
+                Menos complejidad, más utilidad.
+                Aplicaciones ligeras, intuitivas y mantenibles.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="border-t border-white/10">
+
+    <div class="max-w-6xl mx-auto px-6 py-8">
+
+        <div class="flex flex-col md:flex-row justify-between gap-4">
+
+            <div>
+                © 2026 Nana Bytes Studio
+            </div>
+
+            <div class="flex gap-6">
+
+                <a href="./privacy.html">Privacidad</a>
+				<a href="./terms.html">Términos</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
